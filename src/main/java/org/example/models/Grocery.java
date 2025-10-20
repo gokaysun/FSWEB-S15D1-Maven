@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class Grocery {
 
-    // Public static grocery list
+
     public static ArrayList<String> groceryList = new ArrayList<>();
 
-    // Konsol uygulaması
+    // uygulmanin secenek kismii
     public static void startGrocery() {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -23,7 +23,7 @@ public class Grocery {
             System.out.print("Seçiminiz: ");
 
             choice = scanner.nextInt();
-            scanner.nextLine(); // newline karakterini temizle
+            scanner.nextLine();
 
             switch (choice) {
                 case 0:
@@ -49,7 +49,7 @@ public class Grocery {
         scanner.close();
     }
 
-    // Listeye eleman ekleme
+    // liste elemean ekleyelimm
     public static void addItems(String input) {
         String[] items = input.split(",");
         for (String item : items) {
@@ -64,7 +64,7 @@ public class Grocery {
         Collections.sort(groceryList);
     }
 
-    // Listeden eleman çıkarma
+    // Listtden eleman cikaralimmm
     public static void removeItems(String input) {
         String[] items = input.split(",");
         for (String item : items) {
@@ -79,12 +79,12 @@ public class Grocery {
         Collections.sort(groceryList);
     }
 
-    // Elemanın listede olup olmadığını kontrol etme
+    // eleman listede mi kontrol edelim
     public static boolean checkItemIsInList(String product) {
         return groceryList.contains(product);
     }
 
-    // Listeyi sıralayarak yazdırma
+    // lsiteyi siralayarrakk yazalimm
     public static void printSorted() {
         Collections.sort(groceryList);
         System.out.println("=== Güncel Market Listesi ===");
